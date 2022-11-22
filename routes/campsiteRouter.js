@@ -214,7 +214,7 @@ campsiteRouter
               .catch((err) => next(err));
           } else {
             err = new Error(
-              "You are not the correct author to access this endpoint!"
+              "You must log in as the author of this comment to edit it.!"
             );
             err.status = 403;
             return next();
@@ -251,7 +251,7 @@ campsiteRouter
               .catch((err) => next(err));
           } else {
             err = new Error(
-              "You are not the correct author to access this endpoint!"
+              "You must log in as the author of this comment to delete it!"
             );
             err.status = 403;
             return next();
